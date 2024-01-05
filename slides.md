@@ -60,12 +60,16 @@ transition: fade-out
 JavaScript jest językiem kompilowanym, który czasami jest mylony z językiem interpretowanym, gdyż kompiluje się za każdym razem, gdy jest wykonywany. 
 
 Podstawowymi zaletami JS są jego:
+<v-clicks>
 
 - 🎨 **Wszechstronność** - Może być on używany zarówno po stronie klienta(w przeglądarkach internetowych) jak i po stronie serwera(Node.js)
 - ⏳ **Asynchroniczność** - obsługa asynchroniczności za pomocą callbaków i obietnic(Promise) oraz async/await
 - 🔀 **Dynamiczne typowanie danych** - jedna zmienna w przeciągu swojego życia może posiadać wartości różnych typów
 - 🤹‍♂️ **Interakcja z DOM** - JavaScript umożliwia interakcję z modelem obiektowym dokumentu (DOM), co pozwala na dynamiczną modyfikację treści i struktury stron internetowych.
 - 🧑‍💻 **Wsparcie dla programowania obiektowego** - JavaScript jest językiem programowania obiektowego, co umożliwia tworzenie bardziej zorganizowanego i modularnego kodu.
+
+</v-clicks>
+
 
 <br>
 <br>
@@ -77,7 +81,7 @@ layout: default
 
 <h1 class="text-purple">Przykładowy kod w JavaScript</h1> 
 
-```js {all|1|1|1|2-3|2-3|2-3|5-9|14-15|17-21}
+```js {all|1|1|1|2-3|2-3|2-3|5-9|6|1-12|14-15|17-21}
 function generateRandomPassword(length) {
   const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   let password = "";
@@ -106,6 +110,7 @@ console.log('NoEmpty' == false) // False
 <arrow v-click="[3, 4]" x1="500" y1="220" x2="330" y2="130" color="#564" width="3" arrowSize="1" />
 <arrow v-click="[5, 6]" x1="280" y1="230" x2="110" y2="140" color="#564" width="3" arrowSize="1" />
 <arrow v-click="[6, 7]" x1="265" y1="250" x2="95" y2="160" color="#564" width="3" arrowSize="1" />
+<arrow v-click="[8, 9]" x1="280" y1="304" x2="110" y2="214" color="#564" width="3" arrowSize="1" />
 
 <style>
 .footnotes-sep {
@@ -134,18 +139,72 @@ Najbardziej popularnymi są frameworki frontendowe Angular, Vue i React.
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://plus.unsplash.com/premium_photo-1671439543718-9e4d009827e8?q=80&w=2113&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
 # Silniki
-Silniki JavaScriptowe to programy komputerowe, które interpretują i wykonują kod napisany w języku JavaScript. 
-Te silniki są integralną częścią środowisk uruchomieniowych, które umożliwiają wykonanie kodu JavaScript na różnych platformach.
+Silniki JavaScriptowe to programy komputerowe, które interpretują i wykonują kod napisany w języku JavaScript. Silniki JavaScriptowe są niezbędne do przetwarzania i wykonania tego kodu w środowisku przeglądarki internetowej.
 
 ---
+layout: default
+---
+# Przykładowe silniki
 
-# Components
 
-<div grid="~ cols-2 gap-4">
+Silniki jakie można wyróżnić to:
+<v-clicks> 
+
+<div>
+<div class="flex pt-10">
+ <div class="text-xs pt-1 pr-1">◼</div>
+	
+   <div class="">
+     <img class="w-6 h-6" :src="'./components/V8-logo.png'"/> 
+   </div>  
+   <div class="font-bold pr-2">
+     V8
+   </div>
+   <div> - V8 to silnik JavaScript stworzony przez Google. Jest on używany w przeglądarkach internetowych  </div>
+ </div> 
+
+<div> opartych na Chromium, takich jak Google Chrome i Opera. V8 jest znany ze swojej szybkości wykonania kodu JavaScript dzięki technologiom takim jak kompilacja do natywnego kodu maszynowego.  </div>
+</div>
+
+<div>
+<div class="flex pt-10">
+ <div class="text-xs pt-1 pr-1">◼</div>
+	
+   <div class="">
+     <img class="w-6 h-6" :src="'./components/spidermonkey-logo.png'"/> 
+   </div>  
+   <div class="font-bold pr-2">
+     SpiderMonkey  
+   </div>
+   <div> - Jest to silnik JavaScript używany w przeglądarkach Mozilla Firefox. SpiderMonkey jest   </div>
+ </div> 
+
+<div> jednym z najstarszych silników JavaScript i rozwijany jest przez Mozilla Foundation. Został on napisany w językach C++, Rust i JavaScript. </div>
+</div>
+
+<div>
+<div class="flex pt-10">
+ <div class="text-xs pt-1 pr-1">◼</div>
+	
+   <div class="">
+     <img class="w-6 h-6" :src="'./components/apple-logo.png'"/> 
+   </div>  
+   <div class="font-bold pr-2">
+     JavaScriptCore  
+   </div>
+   <div> - Silnik ten jest używany w przeglądarkach Safari firmy Apple. Jest również znany jako </div>
+ </div> 
+
+<div> Nitro. JavaScriptCore jest częścią projektu WebKit, który obejmuje również renderowanie stron internetowych. </div>
+</div>
+
+</v-clicks>
+
+<!-- <div grid="~ cols-2 gap-4">
 <div>
 
 You can use Vue components directly inside your slides.
@@ -154,10 +213,10 @@ We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that
 
 ```html
 <Counter :count="10" />
-```
+``` -->
 
 <!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
+<!-- <Counter :count="10" m="t-4" />
 
 Check out [the guides](https://sli.dev/builtin/components.html) for more.
 
@@ -171,7 +230,7 @@ Check out [the guides](https://sli.dev/builtin/components.html) for more.
 <Tweet id="1390115482657726468" scale="0.65" />
 
 </div>
-</div>
+</div> -->
 
 <!--
 Presenter note with **bold**, *italic*, and ~~striked~~ text.
@@ -184,143 +243,22 @@ Also, HTML elements are valid:
 -->
 
 ---
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
+layout: iframe-right
+url: https://hermesengine.dev/
 preload: false
+transition: slide-up
 ---
 
-# Animations
+# HermesEngine
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
+Hermes to silnik JavaScript typu open source zoptymalizowany pod kątem React Native. W przypadku wielu aplikacji korzystanie z Hermes spowoduje skrócenie czasu uruchamiania, zmniejszenie zużycia pamięci i mniejszy rozmiar aplikacji w porównaniu z JavaScriptCore. Hermes jest domyślnie używany przez React Native i nie jest wymagana żadna dodatkowa konfiguracja, aby go włączyć.
 
 ---
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
+layout: image
+image: ./components/image-grayscale.png
+---
+<h1 class="text-white">Cel pracy</h1>
+Temat pracy koncentruje się na analizie porównawczej wydajności czterech silników JavaScriptowych: SpiderMonkey, V8, JavaScript Core oraz HermesEngine. Badanie ma na celu ocenę wydajności nowego silnika, tj. HermesEngine, względem starszych rozwiązań. Analiza uwzględnia różne parametry wydajności, takie jak szybkość wykonywania operacji, optymalizacja zarządzania pamięcią oraz zgodność ze standardami. Pozwoli to na określenie, który silnik jest najlepszy w zależności od tych parametrów, co skutkuje tym, że programista będzie miał świadomość, na co powinien zwracać uwagę, gdy tworzy oprogramowanie dla różnych przeglądarek internetowych. Poza tym badanie uświadomi, jak wielkie możliwości ma nowy silnik, gdyż aktualnie nie jest on jeszcze popularnym rozwiązaniem.
 ---
 
 # Diagrams
