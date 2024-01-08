@@ -258,95 +258,40 @@ layout: image
 image: ./components/image-grayscale.png
 ---
 <h1 class="text-white">Cel pracy</h1>
-Temat pracy koncentruje się na analizie porównawczej wydajności czterech silników JavaScriptowych: SpiderMonkey, V8, JavaScript Core oraz HermesEngine. Badanie ma na celu ocenę wydajności nowego silnika, tj. HermesEngine, względem starszych rozwiązań. Analiza uwzględnia różne parametry wydajności, takie jak szybkość wykonywania operacji, optymalizacja zarządzania pamięcią oraz zgodność ze standardami. Pozwoli to na określenie, który silnik jest najlepszy w zależności od tych parametrów, co skutkuje tym, że programista będzie miał świadomość, na co powinien zwracać uwagę, gdy tworzy oprogramowanie dla różnych przeglądarek internetowych. Poza tym badanie uświadomi, jak wielkie możliwości ma nowy silnik, gdyż aktualnie nie jest on jeszcze popularnym rozwiązaniem.
+Temat pracy koncentruje się na analizie porównawczej wydajności czterech silników JavaScriptowych: SpiderMonkey, V8, JavaScriptCore oraz HermesEngine. Badanie ma na celu ocenę wydajności nowego silnika, tj. HermesEngine, względem starszych rozwiązań. Analiza uwzględnia różne parametry wydajności, takie jak szybkość wykonywania operacji, optymalizacja zarządzania pamięcią oraz zgodność ze standardami. Pozwoli to na określenie, który silnik jest najlepszy w zależności od tych parametrów, co skutkuje tym, że programista będzie miał świadomość, na co powinien zwracać uwagę, gdy tworzy oprogramowanie dla różnych przeglądarek internetowych. Poza tym badanie uświadomi, jak wielkie możliwości ma nowy silnik, gdyż aktualnie nie jest on jeszcze popularnym rozwiązaniem.
+---
+transition: fade-out
 ---
 
-# Diagrams
+# Benchmark.js
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+Benchmark.js to biblioteka JavaScript stworzona do pomiaru wydajności różnych fragmentów kodu w środowisku przeglądarki internetowej lub w środowisku Node.js. Pozwala na przeprowadzanie testów wydajnościowych, porównywanie czasów wykonania operacji oraz identyfikowanie potencjalnych obszarów optymalizacji. Biblioteka ta jest przydatna dla programistów, którzy chcą zoptymalizować swoje aplikacje lub porównać wydajność różnych rozwiązań.
 
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
+<div>Posiada:</div>
 
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
+<v-clicks>
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+- 🛠️ **Łatwość użycia** - Benchmark.js oferuje prostą i zwięzłą składnię do definiowania testów wydajnościowych.
+- 📊 **Porównywanie testów** - Pozwala na definiowanie wielu testów i porównywanie ich wyników, co umożliwia identyfikację różnic w wydajności między różnymi fragmentami kodu.
+- 📏 **Dokładne pomiary czasu** - Benchmark.js dba o dokładność pomiarów czasu wykonania, co pozwala na uzyskanie precyzyjnych wyników testów.
+- 🐬 **Wsparcie dla różnych środowisk** - Może być używane zarówno w przeglądarkach internetowych (np. w narzędziach deweloperskich) jak i w środowisku Node.js, co ułatwia testowanie wydajności w różnych kontekstach.
 
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+</v-clicks>
 
 ---
-src: ./pages/multiple-entries.md
-hide: false
+transition: fade-out
+layout: image-right
+image: https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
+# Wbudowane devtools
+
+Do sprawdzenia wydajności optymalizacji zarządzania pamięcią można wykorzystać narzędzia deweloperskie, które są wbudowane w daną przeglądarkę. Dla przeglądarkach opartych na Chromium(silnik V8) będzie to Chrome DevTools, dla Firefox(Spider Monkey) będzie to Firefox DevTools i dla Safari(JavaScriptCore) - Safari Developer Tools. Natomiast Hermes jest ściśle połączony z React Native i aby go uruchomić, należy stworzyć odpowiednią konfigurację. Jednak, gdy aplikacja pracuje na HermesEngine, możliwość debugowania go, jest dostępna w Google Chrome.
 ---
-layout: center
-class: text-center
+transition: fade-out
+layout: default
 ---
 
-# Learn More
+# Zgodność ze standardami
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+Do sprawdzenia zgodności silników z obecnymi standardami JavaScript można wykorzystać testy:
