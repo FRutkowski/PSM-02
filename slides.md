@@ -286,12 +286,110 @@ image: https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&
 
 # Wbudowane devtools
 
-Do sprawdzenia wydajności optymalizacji zarządzania pamięcią można wykorzystać narzędzia deweloperskie, które są wbudowane w daną przeglądarkę. Dla przeglądarkach opartych na Chromium(silnik V8) będzie to Chrome DevTools, dla Firefox(Spider Monkey) będzie to Firefox DevTools i dla Safari(JavaScriptCore) - Safari Developer Tools. Natomiast Hermes jest ściśle połączony z React Native i aby go uruchomić, należy stworzyć odpowiednią konfigurację. Jednak, gdy aplikacja pracuje na HermesEngine, możliwość debugowania go, jest dostępna w Google Chrome.
+Można pomyśleć, że sprawdzenia wydajności optymalizacji zarządzania pamięcią można wykorzystać narzędzia deweloperskie, które są wbudowane w daną przeglądarkę. Dla przeglądarkach opartych na Chromium(silnik V8) będzie to Chrome DevTools, dla Firefox(Spider Monkey) będzie to Firefox DevTools i dla Safari(JavaScriptCore) - Safari Developer Tools. Natomiast Hermes jest ściśle połączony z React Native i aby go uruchomić, należy stworzyć odpowiednią konfigurację. Jednak, gdy aplikacja pracuje na HermesEngine, możliwość debugowania go, jest dostępna w Google Chrome.
 ---
 transition: fade-out
-layout: default
+layout: image-right
+image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
-# Zgodność ze standardami
+# Overhead
 
-Do sprawdzenia zgodności silników z obecnymi standardami JavaScript można wykorzystać testy:
+Sposób wydaje się na pierwszy rzut oka mający sens, jednak problemem jest to, że każda przeglądarka sama w sobie zużywa zasoby, co sprawia, że wyniki nie byłyby wiarygodne. Z tego powodu należy szukać innych sposobów na przetestowanie tych silników.
+
+---
+
+# Ręczna kompilacja silników
+
+Aby warunki do testowania były dobre, należy ręcznie skompilować te silniki, na jednej maszynie, po czym przeprowadzić odpowiednie testy. 
+
+<v-clicks> 
+
+<div>
+<div class="flex pt-10">
+ <div class="text-xs pt-1 pr-1">◼</div>
+	
+   <div class="">
+     <img class="w-6 h-6" :src="'./components/V8-logo.png'"/> 
+   </div>  
+   <div class="font-bold pr-2">
+     V8
+   </div>
+   <div> - Jest napisany w C++ oraz posiada repozytorium otwartoźródlowe repozytorium na Githubie, które </div>
+ </div> 
+
+<div> można skolonować i ręcznie skompilować. </div>
+</div>
+
+<div>
+<div class="flex pt-10">
+ <div class="text-xs pt-1 pr-1">◼</div>
+	
+   <div class="">
+     <img class="w-6 h-6" :src="'./components/spidermonkey-logo.png'"/> 
+   </div>  
+   <div class="font-bold pr-2">
+     SpiderMonkey  
+   </div>
+   <div> - Na oficjalnej stronie SpiderMonkey jest dostęp do oficjalnego kodu, który można   </div>
+ </div> 
+
+<div> skompilować. Na stronie mozilli w dokumentacji jest cała instrukcja, jak krok po kroku to zrobić.  </div>
+</div>
+
+<div>
+<div class="flex pt-10">
+ <div class="text-xs pt-1 pr-1">◼</div>
+	
+   <div class="">
+     <img class="w-6 h-6" :src="'./components/apple-logo.png'"/> 
+   </div>  
+   <div class="font-bold pr-2">
+     JavaScriptCore  
+   </div>
+   <div> - Bazuje on na wieloplatformowym silniku webowym WebKit. Można go skompilować    </div>
+ </div> 
+
+<div> korzystając z GTK Port - zgodnie z instrukcją zawartą w README.md na stronie repozytorium. </div>
+</div>
+
+<div>
+<div class="flex pt-10">
+ <div class="text-xs pt-1 pr-1">◼</div>
+	
+   <div class="">
+     <img class="w-6 h-6" :src="'./components/hermes.png'"/> 
+   </div>  
+   <div class="font-bold pr-2">
+     Hermes  
+   </div>
+   <div> - Można go znaleźć pod linkiem https://github.com/facebook/hermes,   </div>
+ </div> 
+
+<div> Tutaj także instrukcja jest jasno opisana, wszystkie kroki opisane zostały w README.md </div>
+</div>
+
+</v-clicks>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Plan na realizację pracy
+
+- **Kompilacja silników**
+- **Przygotowanie testów**
+- **Wybór technologii do testowania** 
+- **Przeprowadzenie testów**
+- **Dokumentacja**
+---
+layout: end
+transition: slide-up
+background: https://images.unsplash.com/photo-1655196601100-8bfb26cf99e9?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+---
+
+# Dziękuję za uwagę
+
+Filip Rutkowski
+---
